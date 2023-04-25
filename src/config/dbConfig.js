@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
+const dotenv = require('dotenv').config();
 
-const dbConfig = 'mongodb+srv://usuariowd:usuariowd@cluster0.py5vonx.mongodb.net/?retryWrites=true&w=majority';
+const dbConfig = process.env.MONGO_URI;
 
 const connection = mongoose.connect(dbConfig, {
     useNewUrlParser: true,
